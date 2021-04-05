@@ -2,6 +2,63 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v11.0": {
+      "SkiaSharp/1.68.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/SkiaSharp.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/tizen-armel/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "tizen-armel"
+          },
+          "runtimes/tizen-x86/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "tizen-x86"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SkiaSharp.Views/1.68.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.68.0"
+        },
+        "compile": {
+          "lib/MonoAndroid/SkiaSharp.Views.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/SkiaSharp.Views.Android.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.68.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.68.0",
+          "SkiaSharp.Views": "1.68.0",
+          "Xamarin.Forms": "3.3.0.912540"
+        },
+        "compile": {
+          "lib/MonoAndroid/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -9,6 +66,218 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin/2021.1.325.1": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.68.0",
+          "Telerik.UI.for.Xamarin.Documents.CMapUtils": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Core": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Fixed": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Flow": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Flow.FormatProviders.Pdf": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.OpenXml": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.Pdf": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.Xls": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Documents.SpreadsheetStreaming": "2021.1.322",
+          "Telerik.UI.for.Xamarin.Zip": "2021.1.322",
+          "Xamarin.AndroidX.AppCompat.Resources": "1.1.0.1",
+          "Xamarin.AndroidX.Browser": "1.2.0.1",
+          "Xamarin.AndroidX.Legacy.Support.V4": "1.0.0.1",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.2.0.1",
+          "Xamarin.AndroidX.Migration": "1.0.6.1",
+          "Xamarin.AndroidX.RecyclerView": "1.1.0.1",
+          "Xamarin.Forms": "4.8.0.1269",
+          "Xamarin.Google.Android.Material": "1.0.0.1"
+        },
+        "frameworkAssemblies": [
+          "Mono.Android.Export"
+        ],
+        "compile": {
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Chart.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Common.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Data.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Input.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.List.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Primitives.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Barcode.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Chart.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Common.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.ConversationalUI.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.DataControls.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.DataGrid.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.DataVisualization.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.ImageEditor.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Input.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Map.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.PdfViewer.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Primitives.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.RichTextEditor.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Chart.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Common.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Data.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Input.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.List.dll": {},
+          "lib/MonoAndroid10/Telerik.Xamarin.Android.Primitives.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Barcode.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Chart.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Common.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.ConversationalUI.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.DataControls.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.DataGrid.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.DataVisualization.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.ImageEditor.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Input.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Map.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.PdfViewer.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.Primitives.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.RichTextEditor.dll": {},
+          "lib/MonoAndroid10/Telerik.XamarinForms.SkiaSharp.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.CMapUtils/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Fixed": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Zip": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.CMapUtils.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.CMapUtils.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Core/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Zip": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Core.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Fixed/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Zip": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Fixed.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Fixed.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Flow/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Flow.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Flow.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Flow.FormatProviders.Pdf/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Fixed": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Flow": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Flow.FormatProviders.Pdf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Flow.FormatProviders.Pdf.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Spreadsheet/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.OpenXml/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Zip": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.Pdf/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Core": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Fixed": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.Xls/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.OpenXml": "[2021.1.322]",
+          "Telerik.UI.for.Xamarin.Zip": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Documents.SpreadsheetStreaming/2021.1.322": {
+        "type": "package",
+        "dependencies": {
+          "Telerik.UI.for.Xamarin.Zip": "[2021.1.322]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Telerik.Documents.SpreadsheetStreaming.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Documents.SpreadsheetStreaming.dll": {}
+        }
+      },
+      "Telerik.UI.for.Xamarin.Zip/2021.1.322": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Telerik.Zip.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Telerik.Zip.dll": {}
         }
       },
       "Xamarin.AndroidX.Activity/1.1.0.5": {
@@ -109,6 +378,21 @@
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.AppCompat.Resources/1.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.AppCompat.AppCompatResources": "1.1.0.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.Resources.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.Resources.dll": {}
         }
       },
       "Xamarin.AndroidX.Arch.Core.Common/2.1.0.7": {
@@ -975,6 +1259,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Telerik.UI.for.Xamarin": "2021.1.325.1",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
         },
@@ -988,6 +1273,113 @@
     }
   },
   "libraries": {
+    "SkiaSharp/1.68.0": {
+      "sha512": "ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
+      "type": "package",
+      "path": "skiasharp/1.68.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net45/SkiaSharp.targets",
+        "build/tizen40/SkiaSharp.targets",
+        "lib/MonoAndroid/SkiaSharp.dll",
+        "lib/MonoAndroid/SkiaSharp.xml",
+        "lib/Xamarin.Mac20/SkiaSharp.dll",
+        "lib/Xamarin.Mac20/SkiaSharp.xml",
+        "lib/Xamarin.TVOS/SkiaSharp.dll",
+        "lib/Xamarin.TVOS/SkiaSharp.xml",
+        "lib/Xamarin.WatchOS/SkiaSharp.dll",
+        "lib/Xamarin.WatchOS/SkiaSharp.xml",
+        "lib/Xamarin.iOS/SkiaSharp.dll",
+        "lib/Xamarin.iOS/SkiaSharp.xml",
+        "lib/net45/SkiaSharp.dll",
+        "lib/net45/SkiaSharp.xml",
+        "lib/netstandard1.3/SkiaSharp.dll",
+        "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0/SkiaSharp.dll",
+        "lib/uap10.0/SkiaSharp.xml",
+        "runtimes/osx/native/libSkiaSharp.dylib",
+        "runtimes/tizen-armel/native/libSkiaSharp.so",
+        "runtimes/tizen-x86/native/libSkiaSharp.so",
+        "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x86/native/libSkiaSharp.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
+        "skiasharp.1.68.0.nupkg.sha512",
+        "skiasharp.nuspec",
+        "xamarin.interactive/SkiaSharp.Workbooks.dll"
+      ]
+    },
+    "SkiaSharp.Views/1.68.0": {
+      "sha512": "tCpeBURfS3knCdB3lz1Ck6HQ5jXRT2CPWrT8QJb1PWhcx1SHm9iLWvcv2cu1Z5blkDuLZ1hREnxd07Mx+xS74Q==",
+      "type": "package",
+      "path": "skiasharp.views/1.68.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid/SkiaSharp.Views.Android.dll",
+        "lib/MonoAndroid/SkiaSharp.Views.Android.xml",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Mac.dll",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Mac.xml",
+        "lib/Xamarin.TVOS/SkiaSharp.Views.tvOS.dll",
+        "lib/Xamarin.TVOS/SkiaSharp.Views.tvOS.xml",
+        "lib/Xamarin.WatchOS/SkiaSharp.Views.watchOS.dll",
+        "lib/Xamarin.WatchOS/SkiaSharp.Views.watchOS.xml",
+        "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll",
+        "lib/Xamarin.iOS/SkiaSharp.Views.iOS.xml",
+        "lib/net45/SkiaSharp.Views.Desktop.dll",
+        "lib/net45/SkiaSharp.Views.Desktop.xml",
+        "lib/net45/SkiaSharp.Views.Gtk.dll",
+        "lib/net45/SkiaSharp.Views.Gtk.xml",
+        "lib/net45/SkiaSharp.Views.WPF.dll",
+        "lib/net45/SkiaSharp.Views.WPF.xml",
+        "lib/tizen40/SkiaSharp.Views.Tizen.dll",
+        "lib/tizen40/SkiaSharp.Views.Tizen.xml",
+        "lib/uap10.0/SkiaSharp.Views.UWP.dll",
+        "lib/uap10.0/SkiaSharp.Views.UWP.xml",
+        "runtimes/win10-arm/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "skiasharp.views.1.68.0.nupkg.sha512",
+        "skiasharp.views.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Forms/1.68.0": {
+      "sha512": "VqxL96ywOA9HUj1MAEO6yvSzg4Tk03ZHvvxQFhbUKgCodDxk9lIUxmBcssTZ/wYjOUn9R2Lf/VIpDMQZlhVh/A==",
+      "type": "package",
+      "path": "skiasharp.views.forms/1.68.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid/SkiaSharp.Views.Forms.dll",
+        "lib/MonoAndroid/SkiaSharp.Views.Forms.xml",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Forms.dll",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Forms.xml",
+        "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll",
+        "lib/Xamarin.iOS/SkiaSharp.Views.Forms.xml",
+        "lib/netstandard1.3/SkiaSharp.Views.Forms.dll",
+        "lib/netstandard1.3/SkiaSharp.Views.Forms.xml",
+        "lib/tizen40/SkiaSharp.Views.Forms.dll",
+        "lib/tizen40/SkiaSharp.Views.Forms.xml",
+        "lib/uap10.0/SkiaSharp.Views.Forms.dll",
+        "lib/uap10.0/SkiaSharp.Views.Forms.xml",
+        "skiasharp.views.forms.1.68.0.nupkg.sha512",
+        "skiasharp.views.forms.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -1033,6 +1425,441 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Telerik.UI.for.Xamarin/2021.1.325.1": {
+      "sha512": "vU0lvjfxd7Emn/Kn+i+2LdCVj5iFcFO7xzerw6kD3goEIZAm3IVl8LmUELz+Ty/RY/CkkIF6cejLLMZOASWskQ==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin/2021.1.325.1",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "images/xamarin.png",
+        "lib/MonoAndroid10/Telerik.Xamarin.Android.Chart.dll",
+        "lib/MonoAndroid10/Telerik.Xamarin.Android.Common.dll",
+        "lib/MonoAndroid10/Telerik.Xamarin.Android.Data.dll",
+        "lib/MonoAndroid10/Telerik.Xamarin.Android.Input.dll",
+        "lib/MonoAndroid10/Telerik.Xamarin.Android.List.dll",
+        "lib/MonoAndroid10/Telerik.Xamarin.Android.Primitives.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.Barcode.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.Chart.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.Common.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.ConversationalUI.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.DataControls.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.DataGrid.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.DataVisualization.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.ImageEditor.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.Input.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.Map.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.PdfViewer.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.Primitives.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.RichTextEditor.dll",
+        "lib/MonoAndroid10/Telerik.XamarinForms.SkiaSharp.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.Barcode.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.Chart.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.Common.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.ConversationalUI.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.DataControls.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.DataGrid.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.DataVisualization.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.ImageEditor.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.Input.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.Map.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.PdfViewer.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.Primitives.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.RichTextEditor.dll",
+        "lib/netstandard1.0/Telerik.XamarinForms.SkiaSharp.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.Barcode.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.Chart.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.Common.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.ConversationalUI.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.DataControls.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.DataGrid.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.DataVisualization.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.ImageEditor.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.Input.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.Map.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.PdfViewer.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.Primitives.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.RichTextEditor.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Telerik.XamarinForms.SkiaSharp.dll",
+        "lib/uap10.0/ListView/Resources/reorder-handle-dark.png",
+        "lib/uap10.0/ListView/Resources/reorder-handle-light.png",
+        "lib/uap10.0/Telerik.Core.dll",
+        "lib/uap10.0/Telerik.Core.pri",
+        "lib/uap10.0/Telerik.Core/Properties/default.rd.xml",
+        "lib/uap10.0/Telerik.Data.dll",
+        "lib/uap10.0/Telerik.Data.pri",
+        "lib/uap10.0/Telerik.Data/Properties/default.rd.xml",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP.dll",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP.pri",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Telerik.UI.Xaml.Chart.UWP.xr.xml",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/ThemeResourcesDark.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/ThemeResourcesDark.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/ThemeResourcesHighContrast.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/ThemeResourcesHighContrast.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/ThemeResourcesLight.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Chart.UWP/Themes/ThemeResourcesLight.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP.dll",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP.pri",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/ListView/Resources/reorder-handle-dark.png",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/ListView/Resources/reorder-handle-light.png",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Telerik.UI.Xaml.Controls.Data.UWP.xr.xml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/DataForm.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/DataForm.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/Listbox.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/Listbox.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/ThemeResourcesDark.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/ThemeResourcesDark.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/ThemeResourcesHighContrast.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/ThemeResourcesHighContrast.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/ThemeResourcesLight.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Controls.Data.UWP/Themes/ThemeResourcesLight.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP.dll",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP.pri",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Telerik.UI.Xaml.Input.UWP.xr.xml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/Calendar.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/Calendar.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/CommonResources.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/CommonResources.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/Resources.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/Resources.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/ThemeResourcesDark.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/ThemeResourcesDark.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/ThemeResourcesHighContrast.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/ThemeResourcesHighContrast.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/ThemeResourcesLight.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Input.UWP/Themes/ThemeResourcesLight.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP.dll",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP.pri",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Telerik.UI.Xaml.Primitives.UWP.xr.xml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/HubTilePalette.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/HubTilePalette.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/Resources.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/Resources.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/SharedResources.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/SharedResources.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeColorsDark.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeColorsDark.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeColorsHighContrast.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeColorsHighContrast.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeColorsLight.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeColorsLight.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeResourcesDark.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeResourcesDark.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeResourcesHighContrast.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeResourcesHighContrast.xbf",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeResourcesLight.xaml",
+        "lib/uap10.0/Telerik.UI.Xaml.Primitives.UWP/Themes/ThemeResourcesLight.xbf",
+        "lib/uap10.0/Telerik.XamarinForms.Barcode.deps.json",
+        "lib/uap10.0/Telerik.XamarinForms.Barcode.dll",
+        "lib/uap10.0/Telerik.XamarinForms.Barcode.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Chart.dll",
+        "lib/uap10.0/Telerik.XamarinForms.Chart.pri",
+        "lib/uap10.0/Telerik.XamarinForms.Chart.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Chart/Telerik.XamarinForms.Chart.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Chart/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.Common.dll",
+        "lib/uap10.0/Telerik.XamarinForms.Common.pri",
+        "lib/uap10.0/Telerik.XamarinForms.Common.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Common/Assets/Fonts/telerikfont.ttf",
+        "lib/uap10.0/Telerik.XamarinForms.Common/Telerik.XamarinForms.Common.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Common/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI.dll",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI.pri",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI.xml",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthor.scale-100.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthor.scale-150.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthor.scale-200.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthor.scale-300.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthorDark.scale-100.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthorDark.scale-125.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthorDark.scale-150.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthorDark.scale-200.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikChatAuthorDark.scale-400.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessage.scale-100.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessage.scale-150.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessage.scale-200.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessage.scale-300.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessageDark.scale-100.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessageDark.scale-125.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessageDark.scale-150.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessageDark.scale-200.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikSendMessageDark.scale-400.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthors.scale-100.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthors.scale-150.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthors.scale-200.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthors.scale-300.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthorsDark.scale-100.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthorsDark.scale-125.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthorsDark.scale-150.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthorsDark.scale-200.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Assets/TelerikTypingAuthorsDark.scale-400.png",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Telerik.XamarinForms.ConversationalUI.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.ConversationalUI/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.DataControls.dll",
+        "lib/uap10.0/Telerik.XamarinForms.DataControls.pri",
+        "lib/uap10.0/Telerik.XamarinForms.DataControls.xml",
+        "lib/uap10.0/Telerik.XamarinForms.DataControls/Telerik.XamarinForms.DataControls.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.DataControls/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.DataGrid.deps.json",
+        "lib/uap10.0/Telerik.XamarinForms.DataGrid.dll",
+        "lib/uap10.0/Telerik.XamarinForms.DataGrid.xml",
+        "lib/uap10.0/Telerik.XamarinForms.DataVisualization.deps.json",
+        "lib/uap10.0/Telerik.XamarinForms.DataVisualization.dll",
+        "lib/uap10.0/Telerik.XamarinForms.DataVisualization.xml",
+        "lib/uap10.0/Telerik.XamarinForms.ImageEditor.dll",
+        "lib/uap10.0/Telerik.XamarinForms.ImageEditor.pri",
+        "lib/uap10.0/Telerik.XamarinForms.ImageEditor.xml",
+        "lib/uap10.0/Telerik.XamarinForms.ImageEditor/Telerik.XamarinForms.ImageEditor.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.ImageEditor/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.Input.dll",
+        "lib/uap10.0/Telerik.XamarinForms.Input.pri",
+        "lib/uap10.0/Telerik.XamarinForms.Input.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Input/Telerik.XamarinForms.Input.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Input/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.Map.dll",
+        "lib/uap10.0/Telerik.XamarinForms.Map.pri",
+        "lib/uap10.0/Telerik.XamarinForms.Map.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Map/Telerik.XamarinForms.Map.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Map/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.PdfViewer.deps.json",
+        "lib/uap10.0/Telerik.XamarinForms.PdfViewer.dll",
+        "lib/uap10.0/Telerik.XamarinForms.PdfViewer.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Primitives.dll",
+        "lib/uap10.0/Telerik.XamarinForms.Primitives.pri",
+        "lib/uap10.0/Telerik.XamarinForms.Primitives.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Primitives/Telerik.XamarinForms.Primitives.xr.xml",
+        "lib/uap10.0/Telerik.XamarinForms.Primitives/Themes/Generic.xaml",
+        "lib/uap10.0/Telerik.XamarinForms.RichTextEditor.dll",
+        "lib/uap10.0/Telerik.XamarinForms.RichTextEditor.pri",
+        "lib/uap10.0/Telerik.XamarinForms.RichTextEditor.xml",
+        "lib/uap10.0/Telerik.XamarinForms.SkiaSharp.deps.json",
+        "lib/uap10.0/Telerik.XamarinForms.SkiaSharp.dll",
+        "lib/uap10.0/Telerik.XamarinForms.SkiaSharp.xml",
+        "lib/xamarinios10/Telerik.Xamarin.iOS.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.Barcode.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.Chart.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.Common.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.ConversationalUI.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.DataControls.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.DataGrid.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.DataVisualization.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.ImageEditor.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.Input.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.Map.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.PdfViewer.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.Primitives.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.RichTextEditor.dll",
+        "lib/xamarinios10/Telerik.XamarinForms.SkiaSharp.dll",
+        "telerik.ui.for.xamarin.2021.1.325.1.nupkg.sha512",
+        "telerik.ui.for.xamarin.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.CMapUtils/2021.1.322": {
+      "sha512": "owoNa9/DxLuDr+o3MhrKvhos2wBpuon2N4ItunqkIelLTpCIIwpSwdT+TyZnOFGXwkfaE7574s36cHSgLTGobQ==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.cmaputils/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.CMapUtils.dll",
+        "lib/netstandard2.0/Telerik.Documents.CMapUtils.xml",
+        "telerik.ui.for.xamarin.documents.cmaputils.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.cmaputils.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Core/2021.1.322": {
+      "sha512": "9VWaQmpvKzL+6tp0AdoVWYDzg1U9+EKAfAivmuk5pfHHloXMFvF/CtZqjaOlrZXKrkbbpClOYEvjOQbIgPqBnw==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.core/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Core.dll",
+        "lib/netstandard2.0/Telerik.Documents.Core.xml",
+        "telerik.ui.for.xamarin.documents.core.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.core.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Fixed/2021.1.322": {
+      "sha512": "RV+lSRGTSPwnXAlXyWcIgT6u9BPg0zu06UOEpQn83vFNRk8b6zn+3jBy/PmbYFaei7M9QmrDO1jqwIhuN13+wQ==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.fixed/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Fixed.dll",
+        "lib/netstandard2.0/Telerik.Documents.Fixed.xml",
+        "telerik.ui.for.xamarin.documents.fixed.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.fixed.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Flow/2021.1.322": {
+      "sha512": "AuufgCmo3YsaHFg17RFsnXqNsxXdHsAbEwWDWk/i7tkzN8c90J4/6jql95SuYvOnbmZLpNYrEBOBsxHLMlZHSw==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.flow/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Flow.dll",
+        "lib/netstandard2.0/Telerik.Documents.Flow.xml",
+        "telerik.ui.for.xamarin.documents.flow.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.flow.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Flow.FormatProviders.Pdf/2021.1.322": {
+      "sha512": "uWvxXSC2hJEseO4KQwG01N/MhEyvmxM33oMwhjqxbDm4WgpaclNqbzx5bmefkOFXSYztFxigcc2pBNZQ7gsITw==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.flow.formatproviders.pdf/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Flow.FormatProviders.Pdf.dll",
+        "lib/netstandard2.0/Telerik.Documents.Flow.FormatProviders.Pdf.xml",
+        "telerik.ui.for.xamarin.documents.flow.formatproviders.pdf.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.flow.formatproviders.pdf.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Spreadsheet/2021.1.322": {
+      "sha512": "TpSemTRKWx546/jmdn8qG+ck1XpgO5SmGsSU917SPn6XPfd2MCGoBmsiI+H2LJoGCbAaSrmAKEYCGDbV0BMjtw==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.spreadsheet/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.dll",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.xml",
+        "telerik.ui.for.xamarin.documents.spreadsheet.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.spreadsheet.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.OpenXml/2021.1.322": {
+      "sha512": "bSF89XE2+W9dfonqo7UpL2gkWOKP1Pl1BO4xErxEE8014zrBvFx4S2G2x3o2j7YVwqtztZqwOQ6Y2RgUXoLeCA==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.openxml/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.xml",
+        "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.openxml.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.openxml.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.Pdf/2021.1.322": {
+      "sha512": "Fv6FuF1awUfJYN9RMKLlk13ZIGxp0vqKnNR1JWf75iM7KOhBmmMkPPxkG7ix1oEFtmF8mI9H4AQLFNBom6o4jA==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.pdf/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Pdf.xml",
+        "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.pdf.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.pdf.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.Spreadsheet.FormatProviders.Xls/2021.1.322": {
+      "sha512": "8If+1fqnw9x/qz566gEwXET0j4y5EmLwLgQLEgczrEvK3aoJoeeXv9BhVrskxFCGvW2TxwKcneEqDzVycfS/eg==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.xls/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll",
+        "lib/netstandard2.0/Telerik.Documents.Spreadsheet.FormatProviders.Xls.xml",
+        "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.xls.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.spreadsheet.formatproviders.xls.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Documents.SpreadsheetStreaming/2021.1.322": {
+      "sha512": "x5i/AIEWMCOtsIlP6nnc8eXMVj1kuJC7wKHz0UiAGo24I8ZZ2/ttkkGcVrF8PbczCOZ0J2Ue1rdONPgjq+wPEg==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.documents.spreadsheetstreaming/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Documents.SpreadsheetStreaming.dll",
+        "lib/netstandard2.0/Telerik.Documents.SpreadsheetStreaming.xml",
+        "telerik.ui.for.xamarin.documents.spreadsheetstreaming.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.documents.spreadsheetstreaming.nuspec"
+      ]
+    },
+    "Telerik.UI.for.Xamarin.Zip/2021.1.322": {
+      "sha512": "0wMxSGoAVLBbd9Fs1s4FNhxV96KHJ1xXKkdZPzTPwnVFwKacTEyRHoUwu7kUpY9FJ3xeJGynbc9I0195OvPoiw==",
+      "type": "package",
+      "path": "telerik.ui.for.xamarin.zip/2021.1.322",
+      "files": [
+        ".nupkg.metadata",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/AutoIt.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for Silverlight - notices.txt",
+        "LicenseAgreements/ThirdParty/Progress Telerik UI for WPF - notices.txt",
+        "LicenseAgreements/ThirdParty/SpecFlow.txt",
+        "images/tdp.png",
+        "lib/netstandard2.0/Telerik.Zip.dll",
+        "lib/netstandard2.0/Telerik.Zip.xml",
+        "telerik.ui.for.xamarin.zip.2021.1.322.nupkg.sha512",
+        "telerik.ui.for.xamarin.zip.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.1.0.5": {
@@ -1119,6 +1946,20 @@
         "lib/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.pdb",
         "xamarin.androidx.appcompat.appcompatresources.1.2.0.6.nupkg.sha512",
         "xamarin.androidx.appcompat.appcompatresources.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.AppCompat.Resources/1.1.0.1": {
+      "sha512": "cDCM7P5cRlHVq39R1zEUw8MV0oWrlGOjc88mcgu9yrHzPck3AbBIMAuvwoGJOj1vs4/RNrlC9K9bTKEcZXKSPQ==",
+      "type": "package",
+      "path": "xamarin.androidx.appcompat.resources/1.1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/monoandroid90/Xamarin.AndroidX.AppCompat.Resources.dll",
+        "lib/monoandroid90/Xamarin.AndroidX.AppCompat.Resources.pdb",
+        "xamarin.androidx.appcompat.resources.1.1.0.1.nupkg.sha512",
+        "xamarin.androidx.appcompat.resources.nuspec"
       ]
     },
     "Xamarin.AndroidX.Arch.Core.Common/2.1.0.7": {
@@ -2137,6 +2978,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
       "Calendar >= 1.0.0",
+      "Telerik.UI.for.Xamarin >= 2021.1.325.1",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
     ]
@@ -2177,6 +3019,10 @@
     "frameworks": {
       "monoandroid11.0": {
         "dependencies": {
+          "Telerik.UI.for.Xamarin": {
+            "target": "Package",
+            "version": "[2021.1.325.1, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"

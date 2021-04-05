@@ -37,6 +37,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Telerik.UI.for.Xamarin": {
+              "target": "Package",
+              "version": "[2021.1.325.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
@@ -100,6 +104,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Telerik.UI.for.Xamarin": {
+              "target": "Package",
+              "version": "[2021.1.325.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

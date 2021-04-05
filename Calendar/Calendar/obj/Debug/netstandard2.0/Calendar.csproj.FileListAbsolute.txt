@@ -1,0 +1,16 @@
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/bin/Debug/netstandard2.0/Calendar.deps.json
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/bin/Debug/netstandard2.0/Calendar.dll
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/bin/Debug/netstandard2.0/ref/Calendar.dll
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/bin/Debug/netstandard2.0/Calendar.pdb
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Calendar.csprojAssemblyReference.cache
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/AppShell.xaml.g.cs
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Calendar.AssemblyInfoInputs.cache
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Calendar.AssemblyInfo.cs
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Calendar.csproj.CoreCompileInputs.cache
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Calendar.dll
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/ref/Calendar.dll
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Calendar.pdb
+/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar/obj/Debug/netstandard2.0/Home.xaml.g.cs

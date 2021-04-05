@@ -125,6 +125,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Telerik.UI.for.Xamarin">
+      <Version>2021.1.325.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -132,5 +135,18 @@
       <Project>{38F1B04B-E0F8-41B3-99A9-20BC575A1176}</Project>
       <Name>Calendar</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\icn_calendar_active.png" />
+    <BundleResource Include="Resources\icn_calendar_active%403x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\icn_home_active%402x.png" />
+    <BundleResource Include="Resources\icn_home_active%403x.png" />
+    <BundleResource Include="Resources\icn_calendar_active%402x.png" />
+    <BundleResource Include="Resources\icn_home_active.png" />
+    <BundleResource Include="Resources\Default.png" />
   </ItemGroup>
 </Project>
