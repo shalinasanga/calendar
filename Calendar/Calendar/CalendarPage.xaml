@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:calendar="clr-namespace:Calendar"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    x:Class="Calendar.CalendarPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--<converters:ResourceNameConverter x:Key="ResourceNameConverter"/>-->
+            <calendar:TitleImageConverter x:Key="TitleImageConverter"/>
+            <calendar:TitleToColorConverter x:Key="TitleToColorConverter"/>
+            <calendar:TextToBoolConverter x:Key="TextToBoolConverter"/>
+            <calendar:StatusToIconConverter x:Key="StatusToIconConverter"/>
+            <calendar:EventStatusToBoolConverter x:Key="EventStatusToBoolConverter"/>
+            <calendar:LabelsToWidthConverter x:Key="LabelsToWidthConverter"/>
+
+            <calendar:ArgbToColorConverter x:Key="ArgbToColorConverter"/>
+            <calendar:StatStatusToColorConverter x:Key="StatStatusToColorConverter"/>
+            <calendar:StatStatusToBoolConverter x:Key="StatStatusToBoolConverter"/>
+            <calendar:StatStatusToEnableColorConverter x:Key="StatStatusToEnableColorConverter"/>
+            <calendar:StatStatusToImageConverter x:Key="StatStatusToImageConverter"/>
+            <calendar:PrivateAppointmentNameConverter x:Key="PrivateAppointmentNameConverter"/>
+            <calendar:LocationCaptionToVisibilityConverter x:Key="LocationCaptionToVisibilityConverter"/>
+            <calendar:AppointmentTemplateSelector x:Key="AppointmentTemplateSelector">
+                <calendar:AppointmentTemplateSelector.AllDay>
+                    <DataTemplate x:DataType="calendar:DetailEventModel">
+                        <telerikPrimitives:RadBorder BorderColor="Gray" BorderThickness="1" CornerRadius="3" Padding="0">
+                            <Grid BackgroundColor="{StaticResource BackgroundColorGrey}" ColumnSpacing="0" Margin="0" Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout x:Name="LabelList" Grid.Column="0" BindableLayout.ItemsSource="{Binding EventLableList}"
+                                                                Orientation="Horizontal" Spacing="1" >
+                                    <!--<CollectionView.ItemsLayout>
+                                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="1"/>
+                                    </CollectionView.ItemsLayout>-->
+
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate x:DataType="calendar:EventLabelModel">
+                                            <BoxView BackgroundColor="{Binding HexColor}" WidthRequest="5"/>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                                <Label Grid.Column="1" Text="{Binding Title}" Margin="0" Padding="0" FontFamily="{StaticResource BoldFont}"
+                                       FontSize="12"/>
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+                    </DataTemplate>
+                </calendar:AppointmentTemplateSelector.AllDay>
+                <calendar:AppointmentTemplateSelector.NormalAppointment>
+                    <DataTemplate x:DataType="calendar:DetailEventModel">
+                        <telerikPrimitives:RadBorder BorderColor="Gray" BorderThickness="1" CornerRadius="3" Padding="0">
+                            <Grid BackgroundColor="{StaticResource BackgroundColorGrey}" Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0"
+                                   >
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout x:Name="LabelList" Grid.Column="0" BindableLayout.ItemsSource="{Binding EventLableList}"
+                                             Orientation="Horizontal" Spacing="1" >
+                                    <!--<CollectionView.ItemsLayout>
+                                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="1"/>
+                                    </CollectionView.ItemsLayout>-->
+
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate x:DataType="calendar:EventLabelModel">
+                                            <BoxView BackgroundColor="{Binding HexColor}" WidthRequest="5"/>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="0" Margin="0" Padding="0"
+                                             HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                                    <Label Text="{Binding Title}" FontFamily="{StaticResource BoldFont}" FontSize="12" LineBreakMode="WordWrap"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="1">
+                                        <Image Source="owner_icon.png" HeightRequest="12" WidthRequest="12"/>
+                                        <Label Text="{Binding Responsible}" FontSize="10" TextColor="Black" LineBreakMode="TailTruncation"/>
+                                    </StackLayout>
+                                    <!--Location details-->
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="1"
+                                             IsVisible="{Binding Source={x:Reference Location},Path=Text,Converter={StaticResource TextToBoolConverter}}">
+                                        <Image Source="location_icon.png" HeightRequest="12" WidthRequest="12"/>
+                                        <Label x:Name="Location" Text="{Binding LocationCaption}" FontSize="10" TextColor="Black" LineBreakMode="TailTruncation"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="1">
+                                        <Image x:Name="EventStatusDescription" 
+                                           Source="{Binding Source={x:Binding EventStatusDescription},Converter={StaticResource StatusToIconConverter}}"
+                                           IsVisible="{Binding Source={x:Binding EventStatusDescription},Converter={StaticResource EventStatusToBoolConverter}}"
+                                           HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="Private" Source="icon_cal_private12.png" IsVisible="{Binding IsPrivate}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="PublishToWeb" Source="icon_cal_web12.png" IsVisible="{Binding IsPublished}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="PublishedToSognDK" Source="icon_cal_publish_sogndk12.png" IsVisible="{Binding IsPublishedToSognDK}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="Recurence" Source="icon_cal_recurrance12.png" IsVisible="{Binding IsReccuringEvent}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="Reminder" Source="icon_cal_reminder12.png" IsVisible="{Binding HasReminder}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="Attachments" Source="icon_cal_attachment12.png" IsVisible="{Binding HasAttachments}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="SpecialAttention" Source="icon_cal_important12.png" IsVisible="{Binding IsSpecialAttention}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="EventMessage" Source="icon_cal_information_outline12.png" IsVisible="{Binding HasEventMessage}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="LinkAppmnt" Source="icon_cal_links12.png" IsVisible="{Binding HasLink}" HeightRequest="12" WidthRequest="12"/>
+                                        <Image x:Name="MissingResources" Source="icon_missingresources.png" IsVisible="{Binding HasMissingResources}" HeightRequest="12" WidthRequest="12"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+                    </DataTemplate>
+                </calendar:AppointmentTemplateSelector.NormalAppointment>
+                <calendar:AppointmentTemplateSelector.TID>
+                    <DataTemplate x:DataType="calendar:DetailEventModel">
+                        <telerikPrimitives:RadBorder BorderColor="Gray" BorderThickness="1" CornerRadius="3" Padding="0">
+                            <Grid BackgroundColor="{Binding Source={x:Reference TIDTitle},Path=Text,Converter={StaticResource TitleToColorConverter}}" 
+                                  Margin="0" Padding="0" ColumnSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="0" Margin="0" Padding="0"
+                                             HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal" Spacing="2">
+                                        <Image Source="{Binding Source={x:Reference TIDTitle},Path=Text,Converter={StaticResource TitleImageConverter}}"
+                                       HeightRequest="12" WidthRequest="12"/>
+                                        <Label x:Name="TIDTitle" Text="{Binding Title}" FontFamily="{StaticResource BoldFont}" FontSize="12" LineBreakMode="TailTruncation"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="1">
+                                        <Image Source="TID_icon.png" HeightRequest="12" WidthRequest="12"/>
+                                        <Label Text="{Binding TimeString}" FontSize="10" TextColor="Black" LineBreakMode="TailTruncation"/>
+                                        <!--Change this to start and end date proper time string-->
+                                    </StackLayout>
+                                </StackLayout>
+
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+                    </DataTemplate>
+                </calendar:AppointmentTemplateSelector.TID>
+                <calendar:AppointmentTemplateSelector.XBridge>
+                    <DataTemplate x:DataType="calendar:DetailEventModel">
+                        <telerikPrimitives:RadBorder BorderColor="Gray" BorderThickness="1" CornerRadius="3" Padding="0">
+                            <Grid BackgroundColor="{StaticResource BackgroundColorGrey}" Margin="0" Padding="0"
+                                  ColumnSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="0" Margin="0" Padding="0"
+                                             HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                                    <Label Text="{Binding Title}" FontFamily="{StaticResource BoldFont}" FontSize="12" LineBreakMode="TailTruncation"/>
+                                    <StackLayout Orientation="Horizontal" Spacing="1" HorizontalOptions="StartAndExpand">
+                                        <Image Source="owner_icon.png" HeightRequest="12" WidthRequest="12"/>
+                                        <Label Text="X-Bridge" FontSize="10" TextColor="Black" LineBreakMode="TailTruncation"/>
+                                    </StackLayout>
+                                    <Image Source="icon_xbridge12.png" HeightRequest="12" WidthRequest="12"/>
+                                </StackLayout>
+
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+                    </DataTemplate>
+                </calendar:AppointmentTemplateSelector.XBridge>
+            </calendar:AppointmentTemplateSelector>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid x:Name="MainGrid" RowDefinitions="30,*" RowSpacing="1">
+        <telerikInput:RadSegmentedControl x:Name="CalendarSelection" SelectedSegmentTextColor="White"
+                                          SelectedSegmentBackgroundColor="LightGreen"
+                                          SelectionChanged="CalendarSelection_SelectionChanged" >
+            <telerikInput:RadSegmentedControl.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Day</x:String>
+                    <x:String>Week</x:String>
+                    <x:String>Month</x:String>
+                    <x:String>List</x:String>
+                    <x:String>Agenda</x:String>
+                </x:Array>
+            </telerikInput:RadSegmentedControl.ItemsSource>
+        </telerikInput:RadSegmentedControl>
+        <calendar:AgCustomCalendar x:Name="Calendar" Grid.Row="1"
+                                         ViewMode="{Binding CalendarMode,Mode=TwoWay}"
+                                         ViewChanged="Calendar_ViewChanged"
+                                         NativeControlLoaded="Calendar_NativeControlLoaded"
+                                         VerticalOptions="StartAndExpand"                                         
+                                         AppointmentsSource="{Binding EventListForCal}"
+                                         DisplayDateChanged="Calendar_DisplayDateChanged"
+                                         SelectionChanged="Calendar_SelectionChanged"
+                                         TimeSlotTapped="Calendar_TimeSlotTapped"
+                                         AppointmentTapped="Calendar_AppointmentTapped"
+                                         DayNamesDisplayMode="Show"
+                                         BackgroundColor="White"
+                                         MinDate="2000/01/01"
+                                         CellTapped="Calendar_CellTapped">
+
+            <calendar:AgCustomCalendar.AppointmentsStyle>
+                <telerikInput:CalendarAppointmentsStyle
+                    DisplayMode="Shape" ShapeType="Ellipse" ShapesOrientation="Horizontal"
+                    ShapesHorizontalLocation="Center"
+                    ShapesVerticalLocation="Bottom" TextColor="Black">
+                    <telerikInput:CalendarAppointmentsStyle.ShapeSize>
+                        <Size Width="8" Height="8"/>
+                    </telerikInput:CalendarAppointmentsStyle.ShapeSize>
+                </telerikInput:CalendarAppointmentsStyle>
+            </calendar:AgCustomCalendar.AppointmentsStyle>
+            <calendar:AgCustomCalendar.DayViewSettings>
+                <telerikInput:DayViewSettings
+                    TimelineInterval="2:00"
+                    AppointmentContentTemplate="{StaticResource AppointmentTemplateSelector}"/>
+            </calendar:AgCustomCalendar.DayViewSettings>
+            <calendar:AgCustomCalendar.MultiDayViewSettings>
+                <telerikInput:MultiDayViewSettings
+                     AppointmentContentTemplate="{StaticResource AppointmentTemplateSelector}"
+                     VisibleDays="7"
+                     IsWeekendVisible="true"
+                     IsCurrentTimeIndicatorVisible="True"
+                     TimelineInterval="2:00"/>
+            </calendar:AgCustomCalendar.MultiDayViewSettings>
+            <calendar:AgCustomCalendar.MultiDayViewStyle>
+                <telerikInput:MultiDayViewStyle 
+                        AllDayAreaBackgroundColor="Beige"
+                        AllDayAppointmentBackgroundColor="Blue"
+                        AllDayLabelTextColor="Black"
+                        AllDayLabelFontSize="10"                         
+                        AllDayAppointmentTextColor="White"
+                        AllDayAppointmentFontSize="10" />
+            </calendar:AgCustomCalendar.MultiDayViewStyle>
+            <calendar:AgCustomCalendar.AgendaViewSettings >
+                <telerikInput:AgendaViewSettings AppointmentItemTimeFormat="HH:mm"/>
+            </calendar:AgCustomCalendar.AgendaViewSettings>
+        </calendar:AgCustomCalendar>
+    </Grid>
+</ContentPage>

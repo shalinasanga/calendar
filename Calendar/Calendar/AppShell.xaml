@@ -11,9 +11,9 @@
                       ContentTemplate="{DataTemplate views:Home}"/>
 
 
-        <ShellContent x:Name="calendar" Title="Calendar" Route="calendar"
+        <ShellContent x:Name="calendar" Title="Calendar " Route="calendar"
                       Icon="icn_calendar_active"
-                     ContentTemplate="{DataTemplate views:Calendar}" />
+                     ContentTemplate="{DataTemplate views:CalendarPage}" />
 
     </TabBar>
 </Shell>
