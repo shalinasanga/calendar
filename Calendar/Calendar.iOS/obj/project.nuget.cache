@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "GHpL3q1nV0Feyf611ob6iFdCg7NHwRKjvjq0EyLqlFVqxe65pJSQKSnw0kZvCiLb/La6Vtc0+S8Iwc8pjXG4Vg==",
+  "success": true,
+  "projectFilePath": "/Users/agrando/Documents/TestProj/calendar/Calendar/Calendar.iOS/Calendar.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/agrando/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/agrando/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/agrando/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
