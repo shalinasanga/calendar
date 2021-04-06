@@ -3,6 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calendar.App">
     <Application.Resources>
+        <!-- COLORS -->
+        <Color x:Key="BrandColor">#00A99D</Color>
+        <Color x:Key="BrandColorLight">#37B7AE</Color>
+        <Color x:Key="BrandColorLighter">#00F5E4</Color>
+        <Color x:Key="BrandColorDark">#078075</Color>
+        <Color x:Key="BrandColorDarker">#016859</Color>
 
+        <Color x:Key="ButtonColorBlue">#016859</Color>
+        <Color x:Key="BackgroundColorGrey">#f2f2f2</Color>
+        <Color x:Key="TopNavigationColor">#F0F0F0</Color>
+        <Color x:Key="AppointmentTextBackground">#F5F5F5</Color>
+
+        <!-- COMPLEMENT COLORS -->
+        <Color x:Key="ComplementColor">#384f63</Color>
+        <Color x:Key="ComplementColorDark">#272f36</Color>
+        <Color x:Key="ComplementColorDarker">#1f252a</Color>
+        <Color x:Key="TranslucidBlack">#44000000</Color>
+        <Color x:Key="TranslucidWhite">#22ffffff</Color>
+
+        <!-- INDICATOR COLORS -->
+        <Color x:Key="OkColor">#1D6EA5</Color>
+        <Color x:Key="ErrorColor">Red</Color>
+        <Color x:Key="WarningColor">#ffc107</Color>
+
+
+        <Color x:Key="SecondaryColor">#54B9ED</Color>
+        <Color x:Key="FacebookColor">#3e549c</Color>
+        <Color x:Key="ComplentColor">#FF009966</Color>
+
+        <Color x:Key="SaveButtonColor">#22c064</Color>
+        <Color x:Key="DeleteButtonColor">#D50000</Color>
+
+        <Color x:Key="LabelButtonColor">#ffffff</Color>
+
+        <Color x:Key="PlaceholderColor">#22ffffff</Color>
+        <Color x:Key="PlaceholderColorEntry">#77FFFFFF</Color>
+        <Color x:Key="MainMenuBackgroundColor">#283441</Color>
+        <Color x:Key="MainMenuSeparatorColor">#253642</Color>
+        <Color x:Key="ListViewSeparatorColor">#77CCCCCC</Color>
+        <Color x:Key="LightBorderColor">#FFF</Color>
+
+        <Color x:Key="WalkthroughStepBackgroundColor1">#1CBCB4</Color>
+        <Color x:Key="WalkthroughStepIconColor1">#FFF</Color>
+
+        <Color x:Key="ArtinaEntryBorderBotomColor">#2C2F35</Color>
+
+        <Color x:Key="CategoryColor1">#FF0000</Color>
+
+        <!--List colours-->
+        <Color x:Key="ListViewItemTextColor">#808080</Color>
+        <Color x:Key="ShadowColor">#808080</Color>
+        <Color x:Key="SelectedItemsColour">#FFFCE79F</Color>
+        <Color x:Key="SelectedItemsColor">#BCC6CC</Color>
+
+
+        <!--Card colours-->
+        <!--<Color x:Key="CardHeaderColour">White</Color>-->
+        <Color x:Key="CardHeaderColour">#CCCCCC</Color>
+        <!--<Color x:Key="CardParentBackroundColour">#D9D9D9</Color>-->
+        <Color x:Key="CardParentBackroundColour">White</Color>
+        <Color x:Key="CardBackroundColour">White</Color>
+
+
+        <!-- BASE COLORS AND UNITS VALUES -->
+        <Color x:Key="BaseTextColor">#333333</Color>
+        <Color x:Key="AppointmentLabelTextColor">#696969</Color>
+        <Color x:Key="AppointmentheaderLabelTextColor">#2F4F4F</Color>
+        <x:Double x:Key="BaseFontSize">16</x:Double>
+        <x:Double x:Key="BaseButtonHeight">35</x:Double>
+        <x:Double x:Key="BaseButtonBorderRadius">22</x:Double>
+        <x:Decimal x:Key="BaseButtonInputFieldsBorderRadius">10</x:Decimal>
     </Application.Resources>
 </Application>

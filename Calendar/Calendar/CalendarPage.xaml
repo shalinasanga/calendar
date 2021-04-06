@@ -45,7 +45,7 @@
                                         </DataTemplate>
                                     </BindableLayout.ItemTemplate>
                                 </StackLayout>
-                                <Label Grid.Column="1" Text="{Binding Title}" Margin="0" Padding="0" FontFamily="{StaticResource BoldFont}"
+                                <Label Grid.Column="1" Text="{Binding Title}" Margin="0" Padding="0" FontAttributes="Bold"
                                        FontSize="12"/>
                             </Grid>
                         </telerikPrimitives:RadBorder>
@@ -75,7 +75,7 @@
                                 </StackLayout>
                                 <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="0" Margin="0" Padding="0"
                                              HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
-                                    <Label Text="{Binding Title}" FontFamily="{StaticResource BoldFont}" FontSize="12" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="12" LineBreakMode="WordWrap"/>
                                     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="1">
                                         <Image Source="owner_icon.png" HeightRequest="12" WidthRequest="12"/>
                                         <Label Text="{Binding Responsible}" FontSize="10" TextColor="Black" LineBreakMode="TailTruncation"/>
@@ -148,7 +148,7 @@
 
                                 <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="0" Margin="0" Padding="0"
                                              HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
-                                    <Label Text="{Binding Title}" FontFamily="{StaticResource BoldFont}" FontSize="12" LineBreakMode="TailTruncation"/>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="12" LineBreakMode="TailTruncation"/>
                                     <StackLayout Orientation="Horizontal" Spacing="1" HorizontalOptions="StartAndExpand">
                                         <Image Source="owner_icon.png" HeightRequest="12" WidthRequest="12"/>
                                         <Label Text="X-Bridge" FontSize="10" TextColor="Black" LineBreakMode="TailTruncation"/>
