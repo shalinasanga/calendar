@@ -92,10 +92,22 @@ namespace Calendar
                 OnPropertyChanged();
             }
         }
+        private bool isBusy;
+
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
         public async Task ExecuteGetMonthViewEventsCommand()
         {
             try
             {
+                IsBusy = true;
                 if (SelectedDate == DateTime.MinValue)
                 {
                     return;
@@ -160,9 +172,9 @@ namespace Calendar
                 var startdate = SelectedDate.AddDays(-8);
                 ObservableCollection<DetailEventModel> tempList = new ObservableCollection<DetailEventModel>();
                 List<EventLabelModel> labels = new List<EventLabelModel>();
-                //labels.Add(new EventLabelModel { HexColor = "#FF0066" });
-                //labels.Add(new EventLabelModel { HexColor = "#1A4BC0" });
-                //labels.Add(new EventLabelModel { HexColor = "#804000" });
+                labels.Add(new EventLabelModel { HexColor = "#FF0066" });
+                labels.Add(new EventLabelModel { HexColor = "#1A4BC0" });
+                labels.Add(new EventLabelModel { HexColor = "#804000" });
 
                 for (int i = 0; i < 50; i++)
                 {
@@ -173,7 +185,7 @@ namespace Calendar
                             Title = "Title" + i.ToString(),
                             StartDate = startdate.AddHours(1),
                             EndDate = startdate.AddHours(2),
-                            Color = Color.LightBlue,
+                            Color = Color.Green,
                             LocationCaption = "Room 1",
                             EventLableList = labels
                         });
@@ -183,9 +195,9 @@ namespace Calendar
                         tempList.Add(new DetailEventModel
                         {
                             Title = "Title" + i.ToString(),
-                            StartDate = startdate.AddHours(-1),
-                            EndDate = startdate.AddHours(-2),
-                            Color = Color.LightSalmon,
+                            StartDate = startdate.AddHours(-2),
+                            EndDate = startdate.AddHours(-1),
+                            Color = Color.Blue,
                             LocationCaption = "Room 2"
                         });
                     }
@@ -206,17 +218,18 @@ namespace Calendar
                 //        tempList.Add(item);
                 //    }
                 //}
-                EventListForCal.Clear();
+                //EventListForCal.Clear();
                 EventListForCal = tempList;
 
                 //if (CalendarMode == CalendarViewMode.Week)
                 //{
                 //    FilterEventsForSelectedDate(false);
                 //}
+                IsBusy = false;
             }
             catch (Exception exception)
             {
-
+                IsBusy = false;
             }
         }
         //private async Task GenerateEvents()

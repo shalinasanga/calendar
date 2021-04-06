@@ -25,6 +25,11 @@ namespace Calendar
             get { return BindingContext as CalendarViewModel; }
             set { BindingContext = value; }
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            GetEvents();
+        }
         private CalendarCellStyle SetStyleForCell(CalendarCell cell)
         {
 
@@ -317,6 +322,22 @@ namespace Calendar
 
         void Calendar_CellTapped(System.Object sender, Telerik.XamarinForms.Input.CalendarCell e)
         {
+            try
+            {
+                if (Calendar.ViewMode == CalendarViewMode.Month ||
+                    Calendar.ViewMode == CalendarViewMode.Agenda)
+                {
+                    CalendarSelection.SelectedIndex = 1;
+                    CalendarDateCell cell = (CalendarDateCell)e;
+                    if (cell != null)
+                    {
+                        Calendar.DisplayDate = GetFirstDayOfWeek(cell.Date);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+            }
         }
         private async void CommonEventFetchDateValidation(DateTime newValue, DateTime preValue)
         {
